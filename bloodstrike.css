@@ -15,11 +15,9 @@ ocupará el contenido interno, no toda la pantalla.*/
     /*la imagen se ajusta para cubrir todo, sin deformarse.*/
     background-size: cover;
 }
-/*Añade espacio arriba y abajo al contenido.
 
-Si lo quitas, todo queda más pegado al borde superior/inferior.
 
-*/
+/*Añade espacio arriba y abajo al contenido.*/
 .forrar {
     padding: 20px 0;
 }
