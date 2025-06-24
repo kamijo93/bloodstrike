@@ -1,0 +1,162 @@
+
+/*Fondo de la página es una imagen (bg.JPG) que ocupa toda la pantalla (100vh).*/
+
+/* background-size: cover: la imagen se escala para cubrir todo. */
+/*fondo de pantalla*/
+body {
+    /*altura de la página es igual al 100% de la ventana.
+
+★ Si lo quitas, el fondo solo 
+ocupará el contenido interno, no toda la pantalla.*/
+    height: 100vh;
+    /*fondo de la página.*/
+    background-image: url("./bloodstrike/background.png"); 
+
+    /*la imagen se ajusta para cubrir todo, sin deformarse.*/
+    background-size: cover;
+}
+/*Añade espacio arriba y abajo al contenido.
+
+Si lo quitas, todo queda más pegado al borde superior/inferior.
+
+*/
+.forrar {
+    padding: 20px 0;
+}
+
+
+.logo {
+    
+    max-width: 350px;
+  
+    margin : 0 auto;
+    padding: 0 10px;
+}
+
+.logo img {
+  width: 100%;  /* ajustar al ancho del contenido */
+  display: block; /* evita espacio en blanco debajo de la imagen */
+  margin: 0 auto;  /* solo necesario si quitas el ancho al contenedor */
+}
+
+.logo:hover {
+    
+    transform: scale(1.1);
+}
+
+.contenido {
+
+  display: flex;
+    flex-wrap: wrap;
+    max-width:2000px; /*para que se mantenga la posicion al alejar*/ 
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+ 
+   
+   ;
+}
+/*tamaño del cuadro*/
+.cuadro {
+     
+
+    width: 350px;
+    height: 180px;
+    margin: 4px;
+    border: 3px solid #fff;
+    background-color: rgba(105, 104, 104, 0.5);
+    box-sizing: border-box;
+    
+
+    transform: skewX(-14deg);  /* x축 기준으로 왼쪽으로 14도 기울임 */
+    /* transform : 원근법 회전 크기 기울임 이동 */
+    /* skewX : x축 기울임 */
+
+    transition: transform .1s, background-color .6s;
+}
+/* cambia de color al llevar el mouse*/
+.cuadro:hover {
+    background-color: rgb(16, 54, 136);
+    transform: skewX(-14deg) scale(1.1); /*agrandar al llevar enciama el mouse*/
+}
+
+
+    
+
+/* personalizacion de la imagen*/
+.cuadro .imagen {
+    width: 100%;
+    height: inherit;
+    background-position: center;
+    background-size: 60px;
+    background-repeat: no-repeat;
+}
+
+.cuadro .imagen:hover{
+    background-size: 100px;
+
+}
+
+.cuadro .person-name {
+    position: absolute;
+    top : 80%;
+    left : 55%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;     /* 투명도 0 : 완전히 보이지 않음 */
+    transition: opacity 0.3s;
+    
+    
+}
+
+.cuadro .imagen:hover .person-name {
+    opacity: 1;
+}
+
+
+
+.cuadro:nth-child(1) .imagen{ background-image: url("./bloodstrike/Blast.png");   ;
+  
+    background-size: 190px; 
+    }
+.cuadro:nth-child(2) .imagen{ background-image: url("./bloodstrike/E.M.T..png");  
+ background-size: 200px;
+    }
+.cuadro:nth-child(3) .imagen{ background-image: url("./bloodstrike/Emmanice.png");   
+ background-size: 91px;
+    }
+.cuadro:nth-child(4) .imagen{ background-image: url("./bloodstrike/Ethan.png");  
+    background-size: 200px;
+    }
+.cuadro:nth-child(5) .imagen{ background-image: url("./bloodstrike/hank.png");  
+ background-size: 260px;
+    }
+.cuadro:nth-child(6) .imagen{ background-image: url("./bloodstrike/Jet.png");  
+    background-size: 220px;
+    }
+.cuadro:nth-child(7) .imagen{ background-image: url("./bloodstrike/kainda-removebg.png");
+    
+background-size: 150px;}
+     
+.cuadro:nth-child(8) .imagen{ background-image: url("./bloodstrike/Kraken.png"); background-size: 165px;
+     }
+.cuadro:nth-child(9) .imagen{ background-image: url("./bloodstrike/Nacho-removebg.png");background-size: 200px}
+.cuadro:nth-child(10) .imagen{ background-image: url("./bloodstrike/nova.png");background-size: 240px }
+.cuadro:nth-child(11) .imagen{ background-image: url("./bloodstrike/Ran-remove1.png");background-size: 210px }
+.cuadro:nth-child(12) .imagen{ background-image: url("./bloodstrike/spike.png");background-size: 170px }
+.cuadro:nth-child(13) .imagen{ background-image: url("./bloodstrike/VAL.png");background-size: 130px }
+.cuadro:nth-child(14) .imagen{ background-image: url("./bloodstrike/volt.png");background-size: 230px }
+.cuadro:nth-child(15) .imagen{ background-image: url("./bloodstrike/zero1-removebg.png");background-size: 140px;  }
+
+
+
+/*Propiedad	Aplica a...	Ejemplo
+padding-top	parte superior	padding-top: 20px;
+padding-right	lado derecho	padding-right: 15px;
+padding-bottom	parte inferior	padding-bottom: 10px;
+padding-left	lado izquierdo	padding-left: 5px;
+
+*/
